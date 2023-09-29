@@ -1,0 +1,22 @@
+Even and diffuse lighting
+Axis rotation
+Orbits
+Orbit lines ---- come back
+Shadows + Ambient + Light intensity / distance change
+Spheres + Texture overlapping
+Shadow mapping - Shadow Acne and PCF implement 
+Body Focus and SkyBox
+Addition of all other planetary bodies
+Proportional masses, radial distances and eccentricities
+Change default frag so light drop off reaches far away planets / lsMatrix follows cam 
+Axial Tilt (Set axial tilt in mesh currRotAxis, rotate model vertices too) 
+Saturnian ring system
+--- Partial Solution - Solar System Complete - XXX
+Inclination and Orbital Lines
+Ephemerides Implementation - NASA Accurate Solar System
+More Moons
+GUI overlay
+Spacecraft object implementation
+Trajectory and gravitational boundaries
+On the fly Trajectory manipulation
+Finishing touches - Earth (night lights / cloud) texture overlay
