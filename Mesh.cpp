@@ -1,5 +1,4 @@
 #include "Mesh.h"
-#include "Line.h"
 
 Mesh::Mesh(const char* objName, std::vector <Vertex>& vertices, std::vector <GLuint>& indices, std::vector <Texture>& textures, bool isLight, bool areRings, glm::vec4 objColor, glm::vec3 objPos, Shader* shaderProgram, GLfloat objMass){
 	Mesh::name = objName;
@@ -179,7 +178,6 @@ void Mesh::Orbit(Mesh& source, Mesh& lightSource, glm::vec3 objVel, float dt) {
 	if (areRings) { // below assumes the starting position is at z = 0
 		if (Pos.z > 0 && !sign) { 
 			sign = !sign;
-			std::cout << vertices[0].normal.y << std::endl;
 			for (int i = 0; i < vertices.size(); i++) {
 				vertices[i].normal = -vertices[i].normal;
 			}
@@ -192,7 +190,6 @@ void Mesh::Orbit(Mesh& source, Mesh& lightSource, glm::vec3 objVel, float dt) {
 		}
 		else if (Pos.z < 0 && sign) {
 			sign = !sign;
-			std::cout << vertices[0].normal.y << std::endl;
 			for (int i = 0; i < vertices.size(); i++) {
 				vertices[i].normal = -vertices[i].normal;
 			}

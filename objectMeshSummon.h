@@ -3,7 +3,10 @@
 
 #include "Mesh.h"
 
-// mathematically calculates vertex and index information for each object
+/*
+Object Mesh Summon creates the vertex data and element index data for a given shaped object using algorithms from simple inputs.
+Box creates a 6 sided cube, Rings creates a disk (higher numbers of division would increase curvature, Sphere creates a sphere (petals and breakpts would increase curvature).
+*/
 
 class Object {
 public:

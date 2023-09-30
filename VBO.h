@@ -5,6 +5,11 @@
 #include <glm/glm.hpp>
 #include <glad/glad.h>
 
+/*
+The VBO class hold the vertex buffer object as well as the main structure for Vertices of any displayed model.
+Also commands binding, unbinding, and deletion. Holds ID for outside manipulation.
+*/
+
 // Vertex structure to hold all data
 struct Vertex {
 	glm::vec3 position;

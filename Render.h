@@ -8,6 +8,11 @@
 #include "Mesh.h"
 #include "cameraClass.h"
 
+/*
+Render handles generation of shadow maps and skybox. Anything not directly related to meshes or camera is manipulated here. Render
+also commands the simultaneous motion of bodies and initially prepares the window for display.
+*/
+
 class RenderSet {
 public:
 	GLFWwindow* window;
@@ -33,7 +38,7 @@ public:
 	void RenderObjects(Mesh* bodies[], const int numBodies);
 	// generates shadow maps and skybox
 	void set();
-	// render shadw maps
+	// render shadpw maps
 	void ShadowRender(Mesh* bodies[], const int numBodies, Camera* camera);
 	// move bodies
 	void Move(Mesh* bodies[], float dt);

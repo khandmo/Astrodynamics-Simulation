@@ -8,6 +8,10 @@
 #include <iostream>
 #include <cerrno>
 
+/*
+The shader class sets up shaders from their vertex and fragment programs and activates/deletes them when called.
+*/
+
 std::string get_file_contents(const char* filename);
 
 class Shader {

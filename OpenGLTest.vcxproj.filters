@@ -20,9 +20,6 @@
     <ClCompile Include="Render.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
-    <ClCompile Include="Line.cpp">
-      <Filter>Modules</Filter>
-    </ClCompile>
     <ClCompile Include="shaderClass.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
@@ -53,9 +50,6 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="VBO.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Line.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
@@ -94,12 +88,6 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="light.vert">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="line.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="line.vert">
       <Filter>Shaders</Filter>
     </None>
     <None Include="skybox.frag">

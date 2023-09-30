@@ -7,6 +7,13 @@
 #include <cerrno>
 #include "shaderClass.h"
 
+/*
+The texture class holds textures that can be used by the mesh class for wrapping. 
+Function texUnit sends the texture information to the appropriate fragment shader uniform.
+Has functions for binding and unbinding and deletion.
+Holds ID for outside manipulation.
+*/
+
 class Texture {
 public:
 	GLuint ID;

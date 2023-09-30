@@ -6,7 +6,11 @@
 #include "EBO.h"
 #include "cameraClass.h"
 #include "textureClass.h"
-#include "Line.h"
+
+/*
+Mesh holds all physical data about an object including the model data, whether or not it is a light source or a ring system,
+as well as rotation speed, mass and velocity - orbits are calculated and the model is appropriately manipulated here.
+*/
 
 class Mesh {
 public:
@@ -24,7 +28,7 @@ public:
 	glm::vec3 rPos; // relative posiition to gravitational source
 	glm::vec3 sphPos;
 	glm::mat4 Model;
-	bool sign = false; // checks to see if sun has crossed ring plane
+	bool sign = false; // if rings, checks to see if sun has crossed ring plane
 
 	GLfloat mass;
 	GLfloat h = 0; // specific angular momentum 
@@ -44,10 +48,13 @@ public:
 
 	Mesh(const char* objName, std::vector<Vertex>& vertices, std::vector <GLuint>& indices, std::vector <Texture>& textures, bool isLight, bool areRings, glm::vec4 objColor, glm::vec3 objPos, Shader* shaderProgram, GLfloat objMass);
 
+	// sets shader program for depth map
 	void setShadowShader(Shader& program, glm::mat4 lightSpaceMatrix);
 
+	// switches active shader program
 	void switchShader();
 
+	// sets depth map
 	void setDepthMap(GLuint depthMapInput);
 
 	// calculates emission light if mesh is a light source
@@ -68,7 +75,7 @@ public:
 	// calculate orbital position
 	void Orbit(Mesh& source, Mesh& lightSource, glm::vec3 objVel, float dt);
 
-	// update model position
+	// update model position and orientation
 	void updateModel(Mesh& source);
 
 	

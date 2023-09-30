@@ -4,6 +4,10 @@
 #include <vector>
 #include <glad/glad.h>
 
+/*
+The EBO class handles and holds repeated elements for drawing objects to the screen.
+*/
+
 class EBO {
 public:
 	// ID reference to EBO

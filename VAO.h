@@ -1,10 +1,13 @@
 #ifndef VAO_CLASS_H
 #define VAO_CLASS_H
 
-// seperate file for VAO creation, including a function
-// to link VBO to VAO
 #include <glad/glad.h>
 #include "VBO.h"
+
+/*
+The VAO class sets up vertex arrtibute objects and can link attributes, bind and unbind, and delete itself when called. 
+Holds ID to be manipulated from the outside.
+*/
 
 class VAO {
 public:

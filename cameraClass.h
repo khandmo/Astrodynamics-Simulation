@@ -11,6 +11,12 @@
 
 #include "shaderClass.h"
 
+/*
+The camera class handles the manipulation of the camera matrices for position and orientation. It also handles
+user inputs for movement of the camera and focus mode / view.
+
+*/
+
 class Camera {
 public:
 	int cameraViewCycle = 0;

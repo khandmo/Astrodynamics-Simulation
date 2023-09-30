@@ -141,7 +141,6 @@
     <ClCompile Include="cameraClass.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
-    <ClCompile Include="Line.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="objectMeshSummon.cpp" />
@@ -161,15 +160,12 @@
     <None Include="depth.vert" />
     <None Include="light.frag" />
     <None Include="light.vert" />
-    <None Include="line.frag" />
-    <None Include="line.vert" />
     <None Include="skybox.frag" />
     <None Include="skybox.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cameraClass.h" />
     <ClInclude Include="EBO.h" />
-    <ClInclude Include="Line.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="objectMeshSummon.h" />
     <ClInclude Include="shaderClass.h" />

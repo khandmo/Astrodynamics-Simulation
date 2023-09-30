@@ -3,7 +3,7 @@ Visually represents a replica solar system with nothing but C++, OpenGL and GLFW
 Rendering, shadow mapping, vertex handling all done by hand.
 Spheres approximated with triangles and texture laying by hand, no models, no copy + paste formulae.
 Matrix manipulation of positions of objects, and camera all done by hand, object positions
-estimated using invented data with Einsteinian relativity - with the future capability
+estimated using invented data with 2-body Einsteinian relativity - with the future capability
 to handle PPN approximations with NASA figures (given below).
 
 Celestial body parameters were determined as follows:
@@ -45,7 +45,7 @@ The render file has a function "Move" which assigns velocities, rotational speed
 and orbital evolution speed (dt). Higher dt results in slower evolution. Lower dt
 results in faster evolution.
 
-Textures, Data, and Methods:
+Methods:
 https://learnopengl.com/
 Planetary Textures -
 https://www.solarsystemscope.com/textures/
@@ -53,7 +53,7 @@ Starry SkyBox-
 https://svs.gsfc.nasa.gov/4851/
 Moon Texture-
 https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=4720
-Real Modeling Figures-
+Real Modeling Description - 
 https://ilrs.gsfc.nasa.gov/docs/2014/196C.pdf
 2-body Einstein approximation Method-
 Introducing Einstein's Relativity - Ray D'Inverno
