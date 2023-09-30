@@ -114,13 +114,26 @@ void RenderSet::ShadowRender(Mesh* bodies[], const int numBodies, Camera* camera
 
 	// set light shader matrix
 // objects not in depth map will not produce shadows
-	float near_plane = 1.0f, far_plane = 7.5f;
+	float near_plane = 1.0f, far_plane = 17.5f; // if lightView matrix focuses on planets, FOV must be wide enough to catch moon(s)
 	glm::mat4 lightProjection = glm::ortho(-10.0f, 10.0f,
 		-10.0f, 10.0f, near_plane, far_plane);
 
-	glm::mat4 lightView = glm::lookAt(
-		glm::vec3(0.0f, 0.0f, 0.0f), // light source position
-		-(*camera).Position, // position looking towards - follows camera position
+	int closestBody = 0;
+	float distanceToClosest = 10000;
+	// find closest planet to camera (body 0 is the sun and bodies 4 and 8 are not planets)
+	for (int i = 1; i < numBodies; i++) {
+		if (i != 4 && i != 8) {
+			float bodyDist = abs(glm::length(camera->Position - bodies[i]->Pos));
+			if (distanceToClosest > bodyDist) { // vector to body
+				distanceToClosest = bodyDist;
+				closestBody = i;
+			}
+		}
+	}
+
+	glm::mat4 lightView = glm::lookAt( // has be based on focuses body position if a focused body exists
+		bodies[closestBody]->Pos - (7.0f * glm::normalize(bodies[closestBody]->Pos)), // light source position - a fixed distance from the closest planet to camera
+		bodies[closestBody]->Pos, // position looking towards - closest body position
 		glm::vec3(0.0f, 1.0f, 0.0f));
 
 	lightSpaceMatrix = lightProjection * lightView;
